@@ -1,38 +1,98 @@
-.App {
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* You can choose an appropriate font */
+  background-color: #0f0f0f;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 0; /* Increase padding to adjust header height */
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin-right: 10px;
+}
+
+.section {
+  padding: 20px 0;
+}
+
+.banner {
+  width: 100%;
+  height: 300px;
+}
+
+.search {
+  width: 400px;
+  height: 40px;
+  font-size: 16px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.movie-card {
+  background-color: #1c1c1c;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.movie-details {
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.movie-posters {
+  display: flex; /* Create a flex container */
+  flex-wrap: wrap; /* Allow posters to wrap to the next line */
+}
+
+.movie-poster {
+  flex: 1; /* Take equal space in the row */
+  margin-right: 10px; /* Optional margin between posters */
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
+
