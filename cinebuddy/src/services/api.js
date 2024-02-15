@@ -22,5 +22,27 @@ export const fetchMovieDetails = async (movieId) => {
   return data;
 };
 
+export const fetchTrendingMovies = async () => {
+  const url = `${baseUrl}/trending/movie/week?api_key=${apiKey}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data.results;
+};
+
+export const fetchTrendingTvShows = async () => {
+  const url = `${baseUrl}/trending/tv/week?api_key=${apiKey}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data.results;
+};
+
+export const fetchCast = async (movieId) => {
+  const url = `${baseUrl}/movie/${movieId}/credits?api_key=${apiKey}`;
+  const response = await fetch(url);
+  const data = await response.json();
+  return data.cast;
+};
+
+
 
 

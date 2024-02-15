@@ -32,10 +32,15 @@ nav {
   padding: 10px 0;
 }
 
+.navLinks {
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+
 nav a {
-  color: #fff;
-  text-decoration: none;
-  margin-right: 10px;
+ padding: 0 10px;
 }
 
 .section {
@@ -75,15 +80,34 @@ nav a {
   color: #ccc;
 }
 
-.movie-posters {
-  display: flex; /* Create a flex container */
-  flex-wrap: wrap; /* Allow posters to wrap to the next line */
+.moviePostersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
 }
 
-.movie-poster {
-  flex: 1; /* Take equal space in the row */
-  margin-right: 10px; /* Optional margin between posters */
+.moviePoster {
+  margin: 10px;
+  width: 250px;
+  text-align: center;
 }
+
+.moviePoster img {
+  width: 100%;
+  height: auto;
+}
+
+.moviePoster h3 {
+  margin: 10px 0;
+}
+
+.moviePoster p {
+  font-size: 14px;
+}
+
+
+
 
 @media (max-width: 768px) {
   .container {
