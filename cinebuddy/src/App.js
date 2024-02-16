@@ -6,6 +6,7 @@ import Browse from './pages/Browse';
 import Movies from './pages/Movies';
 import TvShows from './pages/TvShows';
 import Details from './Components/Details'; // Import the Details component
+import Footer from './Components/Footer';
 import './App.css'
 
 const App = () => {
@@ -18,6 +19,7 @@ const App = () => {
         <Route path="/tvshows" element={<TvShows />} />
         <Route path="/details/:id" element={<Details />} />
       </Routes>
+      <Footer />
     </Router>
   );
 };

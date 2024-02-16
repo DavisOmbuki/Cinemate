@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import { API_KEY, BASE_URL } from '../api';
 import SearchResults from './SearchResults';
+import '../Header.css'; // Import the CSS file for styling
 
 const Header = () => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -32,21 +33,28 @@ const Header = () => {
 
   return (
     <header>
-      <h1>Cinebuddy</h1>
-      <nav>
-        <Link to="/">Browse</Link>
-        <Link to="/movies">Movies</Link>
-        <Link to="/tvshows">TV Shows</Link>
-      </nav>
-      <form onSubmit={handleSearchSubmit}>
-        <input
-          type="text"
-          placeholder="Search movies and TV shows..."
-          value={searchTerm}
-          onChange={handleSearchChange}
-        />
-        <button type="submit">Search</button>
-      </form>
+      <div className="header-content">
+        <div className="logo-container">
+          <Link to="/">
+            <img src="/logo-color.png" alt="Cinebuddy Logo" className="logo" />
+          </Link>
+          <h1>Cinebuddy</h1>
+        </div>
+        <form onSubmit={handleSearchSubmit} className="search-form">
+          <input
+            type="text"
+            placeholder="Search movies and TV shows..."
+            value={searchTerm}
+            onChange={handleSearchChange}
+          />
+          <button type="submit">Search</button>
+        </form>
+        <nav>
+          <Link to="/">Browse</Link>
+          <Link to="/movies">Movies</Link>
+          <Link to="/tvshows">TV Shows</Link>
+        </nav>
+      </div>
       {loading && <p>Loading...</p>}
       {searchResults.length > 0 && <SearchResults results={searchResults} />}
     </header>
@@ -54,6 +62,9 @@ const Header = () => {
 };
 
 export default Header;
+
+
+
 
 
 
