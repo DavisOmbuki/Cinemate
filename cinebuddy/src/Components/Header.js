@@ -53,6 +53,7 @@ const Header = () => {
           <Link to="/">Browse</Link>
           <Link to="/movies">Movies</Link>
           <Link to="/tvshows">TV Shows</Link>
+          <Link to="/watchlist">Watchlist</Link>
         </nav>
       </div>
       {loading && <p>Loading...</p>}
