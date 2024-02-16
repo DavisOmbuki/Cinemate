@@ -41,6 +41,7 @@ nav {
 
 nav a {
  padding: 0 10px;
+ color: #fff; 
 }
 
 .section {
@@ -51,14 +52,16 @@ nav a {
   width: 100%;
   height: 300px;
 }
-
-.search {
-  width: 400px;
-  height: 40px;
-  font-size: 16px;
-  padding: 10px;
-  margin: 10px 0;
+input[type="text"] {
+  padding: 8px; /* Adjust the padding to increase the size */
+  font-size: 16px; /* Adjust the font size if needed */
 }
+
+button {
+  padding: 8px; /* Set the same padding as the search bar */
+  font-size: 16px; /* Set the same font size as the search bar */
+}
+
 
 .movie-card {
   background-color: #1c1c1c;
@@ -87,25 +90,26 @@ nav a {
   margin-top: 20px;
 }
 
-.moviePoster {
-  margin: 10px;
-  width: 250px;
-  text-align: center;
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px; /* Adjust the spacing between posters */
 }
 
-.moviePoster img {
+.movie-poster {
   width: 100%;
-  height: auto;
+}
+.tv-show-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+  gap: 16px; /* Adjust the spacing between posters */
 }
 
-.moviePoster h3 {
-  margin: 10px 0;
+.tv-show-poster {
+ width: 100%; /* Adjust the width of each poster */
 }
-
-.moviePoster p {
-  font-size: 14px;
-}
-
 
 
 
