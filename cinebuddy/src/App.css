@@ -1,0 +1,147 @@
+/* Reset default browser styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Roboto', sans-serif; /* You can choose an appropriate font */
+  background-color: #0f0f0f;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+header {
+  background-color: #111;
+  color: #fff;
+  padding: 40px 0; /* Increase padding to adjust header height */
+  text-align: center;
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo-container {
+  margin-right: 40px;
+}
+
+.logo {
+  height: 100px;
+  width: auto;
+}
+
+nav {
+  background-color: #333;
+  color: #fff;
+  padding: 20px 0;
+}
+
+.navLinks {
+  display: flex;
+  justify-content: space-evenly;
+  
+}
+
+
+nav a {
+ padding: 0 10px;
+ color: #fff; 
+}
+
+.section {
+  padding: 20px 0;
+}
+
+.banner {
+  width: 100%;
+  height: 300px;
+}
+input[type="text"] {
+  padding: 8px; /* Adjust the padding to increase the size */
+  font-size: 16px; /* Adjust the font size if needed */
+}
+
+button {
+  padding: 8px; /* Set the same padding as the search bar */
+  font-size: 16px; /* Set the same font size as the search bar */
+}
+
+
+.movie-card {
+  background-color: #1c1c1c;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.movie-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+.movie-details {
+  margin-top: 10px;
+  color: #ccc;
+}
+
+.moviePostersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+
+
+.movie-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px; /* Adjust the spacing between posters */
+}
+
+.movie-poster {
+  width: 100%;
+}
+.tv-show-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+
+  gap: 16px; /* Adjust the spacing between posters */
+}
+
+.tv-show-poster {
+ width: 100%; /* Adjust the width of each poster */
+}
+
+
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0 10px;
+  }
+}
+
+footer {
+  background-color: #333;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+
+
+
+
