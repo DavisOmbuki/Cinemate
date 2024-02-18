@@ -1,6 +1,6 @@
 // Header.js
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import { API_KEY, BASE_URL } from '../api';
 import SearchResults from './SearchResults';
@@ -10,6 +10,7 @@ const Header = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [searchResults, setSearchResults] = useState([]);
   const [loading, setLoading] = useState(false);
+  const navigate = useNavigate(); // Use the useNavigate hook
 
   const handleSearchChange = (e) => {
     setSearchTerm(e.target.value);
@@ -32,6 +33,9 @@ const Header = () => {
   };
 
   const handleTitleClick = () => {
+    // Use navigate to navigate to the Browse page
+    navigate('/');
+    // Reload the page (optional, you can remove this line if you only want navigation)
     window.location.reload();
   };
 
@@ -39,6 +43,7 @@ const Header = () => {
     <header>
       <div className="header-content">
         <div className="logo-container">
+          {/* Link to handle title click */}
           <Link to="/" onClick={handleTitleClick}>
             <img src="/logo-color.png" alt="Cinebuddy Logo" className="logo" />
             <h1>Cinebuddy</h1>
@@ -67,3 +72,4 @@ const Header = () => {
 };
 
 export default Header;
+
