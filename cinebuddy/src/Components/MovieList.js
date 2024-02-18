@@ -3,7 +3,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MovieList = ({ movies }) => {
+const MovieLis= ({ movies }) => {
   return (
     <div className="movie-list">
       {movies.map((movie) => (
