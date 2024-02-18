@@ -31,14 +31,18 @@ const Header = () => {
     }
   };
 
+  const handleTitleClick = () => {
+    window.location.reload();
+  };
+
   return (
     <header>
       <div className="header-content">
         <div className="logo-container">
-          <Link to="/">
+          <Link to="/" onClick={handleTitleClick}>
             <img src="/logo-color.png" alt="Cinebuddy Logo" className="logo" />
+            <h1>Cinebuddy</h1>
           </Link>
-          <h1>Cinebuddy</h1>
         </div>
         <form onSubmit={handleSearchSubmit} className="search-form">
           <input
@@ -63,14 +67,3 @@ const Header = () => {
 };
 
 export default Header;
-
-
-
-
-
-
-
-
-
-
-
