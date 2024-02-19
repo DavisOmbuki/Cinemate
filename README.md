@@ -32,8 +32,7 @@ Cinebuddy is a React-based movie recommendation app that allows users to browse 
 
 1. Clone the repository:
 
-   
-   git clone https://github.com/your-username/cinebuddy.git
+   git clone <https://github.com/your-username/cinebuddy.git>
 
 2. Change into the project directory: cd cinebuddy
 
@@ -41,12 +40,13 @@ Cinebuddy is a React-based movie recommendation app that allows users to browse 
 
 4. Usage
    Start the development server: npm start
-   Open your browser and navigate to http://localhost:3000.
+   Open your browser and navigate to <http://localhost:3000>.
 
 5. API Key
-To fetch movie and TV show data, you'll need to obtain an API key from The Movie Database (TMDb). Once you have the API key, create a file named api.js in the src folder and export your key:   
+To fetch movie and TV show data, you'll need to obtain an API key from The Movie Database (TMDb). Once you have the API key, create a file named api.js in the src folder and export your key:
 
 ## Folder Structure
+
   public: Public assets and HTML template.
   src: React application source code.
      components: React components.
@@ -56,4 +56,5 @@ To fetch movie and TV show data, you'll need to obtain an API key from The Movie
      App.js: Main application component.
 
 ## Contributing
+
 Contributions are welcome! Please follow the Contributing Guidelines for details on how to contribute to this project.
