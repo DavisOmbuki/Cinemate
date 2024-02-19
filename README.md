@@ -57,3 +57,5 @@ To fetch movie and TV show data, you'll need to obtain an API key from The Movie
 
 ## Contributing
 Contributions are welcome! Please follow the Contributing Guidelines for details on how to contribute to this project.
+## trello board
+https://trello.com/b/Pe1JxUXw/cinemate
