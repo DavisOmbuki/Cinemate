@@ -31,6 +31,16 @@ const Watchlist = () => {
     }
   };
 
+  const removeFromWatchlist = async (id) => {
+    try {
+      await axios.delete(`http://localhost:3001/watchlist/${id}`);
+      const updatedList = watchlistItems.filter(item => item.id !== id);
+      setWatchlistItems(updatedList);
+    } catch (error) {
+      console.error('Error removing item from watchlist:', error.message);
+    }
+  };
+
   const handleAddToWatchlist = () => {
     // You can add validation or additional checks here
     addToWatchlist(newItemTitle, new Date().toDateString());
@@ -53,6 +63,7 @@ const Watchlist = () => {
           {watchlistItems.map((item) => (
             <li key={item.id}>
               {item.title} ({item.release_date})
+              <button onClick={() => removeFromWatchlist(item.id)}>Remove</button>
             </li>
           ))}
         </ul>
