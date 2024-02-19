@@ -6,7 +6,7 @@ const Footer = () => {
 
   return (
     <footer>
-      <p>&copy; {currentYear} Cinebuddy</p>
+      <p>&copy; {currentYear} #Cinebuddy</p>
     </footer>
   );
 };
