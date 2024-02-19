@@ -9,7 +9,7 @@ const Browse = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch random movies
+  // Fetch random movies
     axios.get(`${BASE_URL}/discover/movie?api_key=${API_KEY}&sort_by=popularity.desc`)
       .then((response) => setMovies(response.data.results))
       .catch((error) => setError(error.message));
