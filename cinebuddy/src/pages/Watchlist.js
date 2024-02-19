@@ -34,7 +34,7 @@ const Watchlist = () => {
   const handleAddToWatchlist = () => {
     // You can add validation or additional checks here
     addToWatchlist(newItemTitle, new Date().toDateString());
-    setNewItemTitle(''); // Clear the input field after adding
+    setNewItemTitle(''); 
   };
 
   return (
