@@ -6,7 +6,7 @@ import { useParams } from 'react-router-dom';
 import MovieDetails from './MovieDetails';
 
 const Details = () => {
-  const { id } = useParams(); // Use useParams hook to get route parameters
+  const { id } = useParams(); 
   const [itemDetails, setItemDetails] = useState(null);
   const [isAdded, setIsAdded] = useState(false);
 

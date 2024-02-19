@@ -9,7 +9,7 @@ const TvShowDetails = ({ tvShow }) => {
       <p><strong>Popularity:</strong> {tvShow.popularity}</p>
       <p><strong>Number of Seasons:</strong> {tvShow.number_of_seasons}</p>
       <p><strong>Genres:</strong> {tvShow.genres.map(genre => genre.name).join(', ')}</p>
-      {/* Add more details as needed */}
+      {/* Add more details */}
     </div>
   );
 };
