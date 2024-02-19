@@ -45,7 +45,7 @@ const Header = () => {
         <div className="logo-container">
           {/* Link to handle title click */}
           <Link to="/" onClick={handleTitleClick}>
-            <img src="/logo-color.png" alt="Cinebuddy Logo" className="logo" />
+            <img src="/logo-color.jpeg" alt="Cinebuddy Logo" className="logo" />
             <h1>Cinebuddy</h1>
           </Link>
         </div>
