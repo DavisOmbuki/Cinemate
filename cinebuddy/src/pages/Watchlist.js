@@ -1,3 +1,4 @@
+// Watchlist.js
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
@@ -18,14 +19,15 @@ const Watchlist = () => {
     }
   };
 
-  const addToWatchlist = async (title, releaseDate) => {
+  const addToWatchlist = async (title, releaseDate, type) => {
     try {
       const response = await axios.post('http://localhost:3001/watchlist', {
-        title: title,
-        release_date: releaseDate
+        name: title,
+        release_date: releaseDate,
+        type: type,
       });
 
-      setWatchlistItems([...watchlistItems, { id: response.data.id, title: title, release_date: releaseDate }]);
+      setWatchlistItems([...watchlistItems, { id: response.data.id, name: title, release_date: releaseDate, type }]);
     } catch (error) {
       console.error('Error adding item to watchlist:', error.message);
     }
@@ -34,17 +36,18 @@ const Watchlist = () => {
   const removeFromWatchlist = async (id) => {
     try {
       await axios.delete(`http://localhost:3001/watchlist/${id}`);
-      const updatedList = watchlistItems.filter(item => item.id !== id);
+      console.log(`Item with ID ${id} removed from watchlist`);
+
+      const updatedList = watchlistItems.filter((item) => item.id !== id);
       setWatchlistItems(updatedList);
     } catch (error) {
-      console.error('Error removing item from watchlist:', error.message);
+      console.error(`Error removing item with ID ${id} from watchlist:`, error.message);
     }
   };
 
   const handleAddToWatchlist = () => {
-    // You can add validation or additional checks here
     addToWatchlist(newItemTitle, new Date().toDateString());
-    setNewItemTitle(''); // Clear the input field after adding
+    setNewItemTitle('');
   };
 
   return (
@@ -57,12 +60,12 @@ const Watchlist = () => {
         placeholder="Enter title"
       />
       <button onClick={handleAddToWatchlist}>Add to Watchlist</button>
-      
+
       {watchlistItems.length > 0 ? (
         <ul>
           {watchlistItems.map((item) => (
             <li key={item.id}>
-              {item.title} ({item.release_date})
+              {item.name} ({item.release_date})
               <button onClick={() => removeFromWatchlist(item.id)}>Remove</button>
             </li>
           ))}
@@ -75,3 +78,10 @@ const Watchlist = () => {
 };
 
 export default Watchlist;
+
+
+
+
+
+
+
